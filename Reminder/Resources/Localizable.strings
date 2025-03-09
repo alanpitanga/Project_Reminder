@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Reminder
+
+  Created by Alan Pitanga on 04/03/25.
+  
+*/
+
+/* Login Screen */
+
+
+"login.lable.title" = "Entre para acessar suas receitas";
+"login.email.label" = "E-mail";
+"login.email.placeholder" = "email@exemplo.com";
+"login.password.label" = "Senha";
+"login.password.placeholder" = "senha";
+"login.button.title" = "Entrar";
+
+/* Home Screen */
+
+/* Receipts Screen */
+
+/* Newreceipt Screen */
