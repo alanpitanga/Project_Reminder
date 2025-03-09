@@ -18,6 +18,15 @@ class LoginBottomSheetView: UIView {
         return view
     }()
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "login.lable.title".localized
