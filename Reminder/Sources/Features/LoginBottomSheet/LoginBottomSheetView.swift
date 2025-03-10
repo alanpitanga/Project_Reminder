@@ -10,6 +10,8 @@ import UIKit
 
 class LoginBottomSheetView: UIView {
     
+    public weak var delegate: LoginBottomSheetViewDelegate?
+    
     private let handleArea: UIView = {
         let view = UIView()
         view.backgroundColor = .lightGray
@@ -68,6 +70,7 @@ class LoginBottomSheetView: UIView {
         button.layer.cornerRadius = Metrics.medium
         button.titleLabel?.font = Typography.subHeading
         button.tintColor = .white
+        button.addTarget(self, action: #selector(loginButtonDidTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -123,5 +126,14 @@ class LoginBottomSheetView: UIView {
             loginButton.heightAnchor.constraint(equalToConstant: Metrics.buttonSize),
             
         ])
+    }
+    
+    @objc
+     private func loginButtonDidTapped() {
+        let user = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        delegate?.sendLogin(user: user, password: password)
+        
     }
 }

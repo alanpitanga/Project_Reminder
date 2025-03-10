@@ -16,6 +16,7 @@
 		0E87E4CA2D77D2E100C18A15 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87E4C92D77D2E100C18A15 /* String+Ext.swift */; };
 		0E9185C82D713B5100756390 /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */; };
 		0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9185C92D71405100756390 /* LoginBottomSheetView.swift */; };
+		0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */; };
 		0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9025F2D66C02A00247F34 /* AppDelegate.swift */; };
 		0EC902622D66C02A00247F34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC902612D66C02A00247F34 /* SceneDelegate.swift */; };
 		0EC902692D66C02C00247F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC902682D66C02C00247F34 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		0E87E4C92D77D2E100C18A15 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewController.swift; sourceTree = "<group>"; };
 		0E9185C92D71405100756390 /* LoginBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetView.swift; sourceTree = "<group>"; };
+		0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewDelegate.swift; sourceTree = "<group>"; };
 		0EC9025C2D66C02A00247F34 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC9025F2D66C02A00247F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EC902612D66C02A00247F34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */,
 				0E9185C92D71405100756390 /* LoginBottomSheetView.swift */,
+				0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */,
 			);
 			path = LoginBottomSheet;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				0E86F0E32D67FF94009BE7D4 /* SplashViewController.swift in Sources */,
 				0E86F0E52D680182009BE7D4 /* SplashView.swift in Sources */,
 				0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */,
+				0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */,
 				0E6FE92C2D6B9136003967D7 /* Colors-Constants.swift in Sources */,
 				0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */,
 				0E87B5BD2D6D511700D8D3DD /* Text-Constants.swift in Sources */,
