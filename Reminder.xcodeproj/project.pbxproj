@@ -17,6 +17,7 @@
 		0E9185C82D713B5100756390 /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */; };
 		0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9185C92D71405100756390 /* LoginBottomSheetView.swift */; };
 		0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */; };
+		0E988D0C2D7F323D00A87347 /* LoginBottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E988D0B2D7F323D00A87347 /* LoginBottomSheetViewModel.swift */; };
 		0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9025F2D66C02A00247F34 /* AppDelegate.swift */; };
 		0EC902622D66C02A00247F34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC902612D66C02A00247F34 /* SceneDelegate.swift */; };
 		0EC902692D66C02C00247F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC902682D66C02C00247F34 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewController.swift; sourceTree = "<group>"; };
 		0E9185C92D71405100756390 /* LoginBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetView.swift; sourceTree = "<group>"; };
 		0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewDelegate.swift; sourceTree = "<group>"; };
+		0E988D0B2D7F323D00A87347 /* LoginBottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewModel.swift; sourceTree = "<group>"; };
 		0EC9025C2D66C02A00247F34 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC9025F2D66C02A00247F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EC902612D66C02A00247F34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,11 +135,20 @@
 		0E9185C62D713B1100756390 /* LoginBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				0E988D0A2D7F321900A87347 /* ViewModel */,
 				0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */,
 				0E9185C92D71405100756390 /* LoginBottomSheetView.swift */,
 				0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */,
 			);
 			path = LoginBottomSheet;
+			sourceTree = "<group>";
+		};
+		0E988D0A2D7F321900A87347 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E988D0B2D7F323D00A87347 /* LoginBottomSheetViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0EC902532D66C02A00247F34 = {
@@ -244,6 +255,7 @@
 				0E6FE92C2D6B9136003967D7 /* Colors-Constants.swift in Sources */,
 				0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */,
 				0E87B5BD2D6D511700D8D3DD /* Text-Constants.swift in Sources */,
+				0E988D0C2D7F323D00A87347 /* LoginBottomSheetViewModel.swift in Sources */,
 				0E9185C82D713B5100756390 /* LoginBottomSheetViewController.swift in Sources */,
 				0E87B5C02D6D552D00D8D3DD /* Metrics-Constants.swift in Sources */,
 				0E87E4CA2D77D2E100C18A15 /* String+Ext.swift in Sources */,
