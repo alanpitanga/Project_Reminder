@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+import Firebase
 
 protocol LoginBottomSheetViewDelegate: AnyObject {
     
