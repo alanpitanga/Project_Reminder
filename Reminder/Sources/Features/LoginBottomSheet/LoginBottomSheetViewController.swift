@@ -18,6 +18,7 @@ class LoginBottomSheetViewController: UIViewController {
         loginView.delegate = self
         setupUI()
         setupGesture()
+        bindViewModel()
     }
     
     private func setupUI() {
@@ -43,6 +44,12 @@ class LoginBottomSheetViewController: UIViewController {
     
     private func handlePanGesture() {
         
+    }
+    
+    func bindViewModel() {
+        viewModel.succesResult = {[ weak self] in
+            print("chegou na ViewModel")
+        }
     }
     
     func animatedShow(completion: (() -> Void)? = nil) {
