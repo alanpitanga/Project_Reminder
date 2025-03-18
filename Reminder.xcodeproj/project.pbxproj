@@ -12,6 +12,8 @@
 		0E6FE92C2D6B9136003967D7 /* Colors-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FE92B2D6B9136003967D7 /* Colors-Constants.swift */; };
 		0E86F0E32D67FF94009BE7D4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F0E22D67FF94009BE7D4 /* SplashViewController.swift */; };
 		0E86F0E52D680182009BE7D4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F0E42D680182009BE7D4 /* SplashView.swift */; };
+		0E872D652D83255D008A393E /* LoginBottomSheetFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E872D642D83255D008A393E /* LoginBottomSheetFlowDelegate.swift */; };
+		0E872D672D832DB3008A393E /* SplashFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E872D662D832DB3008A393E /* SplashFlowDelegate.swift */; };
 		0E87B5BD2D6D511700D8D3DD /* Text-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87B5BC2D6D511700D8D3DD /* Text-Constants.swift */; };
 		0E87B5C02D6D552D00D8D3DD /* Metrics-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87B5BF2D6D552D00D8D3DD /* Metrics-Constants.swift */; };
 		0E87E4C72D77CFA400C18A15 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E87E4C62D77CFA400C18A15 /* Localizable.strings */; };
@@ -32,6 +34,8 @@
 		0E6FE92B2D6B9136003967D7 /* Colors-Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors-Constants.swift"; sourceTree = "<group>"; };
 		0E86F0E22D67FF94009BE7D4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0E86F0E42D680182009BE7D4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		0E872D642D83255D008A393E /* LoginBottomSheetFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetFlowDelegate.swift; sourceTree = "<group>"; };
+		0E872D662D832DB3008A393E /* SplashFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowDelegate.swift; sourceTree = "<group>"; };
 		0E87B5BC2D6D511700D8D3DD /* Text-Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text-Constants.swift"; sourceTree = "<group>"; };
 		0E87B5BF2D6D552D00D8D3DD /* Metrics-Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Metrics-Constants.swift"; sourceTree = "<group>"; };
 		0E87E4C62D77CFA400C18A15 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			children = (
 				0E86F0E22D67FF94009BE7D4 /* SplashViewController.swift */,
 				0E86F0E42D680182009BE7D4 /* SplashView.swift */,
+				0E872D662D832DB3008A393E /* SplashFlowDelegate.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 		0E9185C62D713B1100756390 /* LoginBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				0E872D642D83255D008A393E /* LoginBottomSheetFlowDelegate.swift */,
 				0E988D0A2D7F321900A87347 /* ViewModel */,
 				0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */,
 				0E9185C92D71405100756390 /* LoginBottomSheetView.swift */,
@@ -328,11 +334,13 @@
 				0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */,
 				0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */,
 				0E6FE92C2D6B9136003967D7 /* Colors-Constants.swift in Sources */,
+				0E872D652D83255D008A393E /* LoginBottomSheetFlowDelegate.swift in Sources */,
 				0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */,
 				0E87B5BD2D6D511700D8D3DD /* Text-Constants.swift in Sources */,
 				0E6E281F2D81E95B00B89AFD /* ReminderFlowCoordinator.swift in Sources */,
 				0E988D0C2D7F323D00A87347 /* LoginBottomSheetViewModel.swift in Sources */,
 				0E9185C82D713B5100756390 /* LoginBottomSheetViewController.swift in Sources */,
+				0E872D672D832DB3008A393E /* SplashFlowDelegate.swift in Sources */,
 				0E87B5C02D6D552D00D8D3DD /* Metrics-Constants.swift in Sources */,
 				0E87E4CA2D77D2E100C18A15 /* String+Ext.swift in Sources */,
 				0EC902622D66C02A00247F34 /* SceneDelegate.swift in Sources */,
