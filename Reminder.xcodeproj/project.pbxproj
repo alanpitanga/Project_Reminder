@@ -18,6 +18,8 @@
 		0E87B5C02D6D552D00D8D3DD /* Metrics-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87B5BF2D6D552D00D8D3DD /* Metrics-Constants.swift */; };
 		0E87E4C72D77CFA400C18A15 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E87E4C62D77CFA400C18A15 /* Localizable.strings */; };
 		0E87E4CA2D77D2E100C18A15 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87E4C92D77D2E100C18A15 /* String+Ext.swift */; };
+		0E8C5B722D8B1DE500EF7CE9 /* ViewControllersFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C5B712D8B1DE500EF7CE9 /* ViewControllersFactoryProtocol.swift */; };
+		0E8C5B742D8B205500EF7CE9 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C5B732D8B205500EF7CE9 /* ViewControllersFactory.swift */; };
 		0E9185C82D713B5100756390 /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */; };
 		0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9185C92D71405100756390 /* LoginBottomSheetView.swift */; };
 		0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */; };
@@ -40,6 +42,8 @@
 		0E87B5BF2D6D552D00D8D3DD /* Metrics-Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Metrics-Constants.swift"; sourceTree = "<group>"; };
 		0E87E4C62D77CFA400C18A15 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		0E87E4C92D77D2E100C18A15 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		0E8C5B712D8B1DE500EF7CE9 /* ViewControllersFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactoryProtocol.swift; sourceTree = "<group>"; };
+		0E8C5B732D8B205500EF7CE9 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewController.swift; sourceTree = "<group>"; };
 		0E9185C92D71405100756390 /* LoginBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetView.swift; sourceTree = "<group>"; };
 		0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 		0E86F0E02D67FF32009BE7D4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0E8C5B702D8B1D9800EF7CE9 /* DependencyInjection */,
 				0E87E4C82D77D2B400C18A15 /* Extensions */,
 				0E9185C62D713B1100756390 /* LoginBottomSheet */,
 				0E6FE9292D6B90FF003967D7 /* Constants */,
@@ -144,6 +149,15 @@
 				0E87E4C92D77D2E100C18A15 /* String+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0E8C5B702D8B1D9800EF7CE9 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				0E8C5B712D8B1DE500EF7CE9 /* ViewControllersFactoryProtocol.swift */,
+				0E8C5B732D8B205500EF7CE9 /* ViewControllersFactory.swift */,
+			);
+			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
 		0E9185C62D713B1100756390 /* LoginBottomSheet */ = {
@@ -329,7 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8C5B722D8B1DE500EF7CE9 /* ViewControllersFactoryProtocol.swift in Sources */,
 				0E86F0E32D67FF94009BE7D4 /* SplashViewController.swift in Sources */,
+				0E8C5B742D8B205500EF7CE9 /* ViewControllersFactory.swift in Sources */,
 				0E86F0E52D680182009BE7D4 /* SplashView.swift in Sources */,
 				0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */,
 				0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */,
