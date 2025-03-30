@@ -12,6 +12,9 @@
 		0E6FE92C2D6B9136003967D7 /* Colors-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FE92B2D6B9136003967D7 /* Colors-Constants.swift */; };
 		0E77DDE12D92EDF200C55180 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DDE02D92EDF200C55180 /* User.swift */; };
 		0E77DDE42D92EED200C55180 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77DDE32D92EED200C55180 /* UserDefaultsManager.swift */; };
+		0E77FCEE2D99AF3F00B385DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77FCED2D99AF3F00B385DF /* HomeViewController.swift */; };
+		0E77FCF02D99AF8200B385DF /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77FCEF2D99AF8200B385DF /* HomeFlowDelegate.swift */; };
+		0E77FCF22D99AF8E00B385DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77FCF12D99AF8E00B385DF /* HomeView.swift */; };
 		0E86F0E32D67FF94009BE7D4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F0E22D67FF94009BE7D4 /* SplashViewController.swift */; };
 		0E86F0E52D680182009BE7D4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F0E42D680182009BE7D4 /* SplashView.swift */; };
 		0E872D652D83255D008A393E /* LoginBottomSheetFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E872D642D83255D008A393E /* LoginBottomSheetFlowDelegate.swift */; };
@@ -38,6 +41,9 @@
 		0E6FE92B2D6B9136003967D7 /* Colors-Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors-Constants.swift"; sourceTree = "<group>"; };
 		0E77DDE02D92EDF200C55180 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0E77DDE32D92EED200C55180 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		0E77FCED2D99AF3F00B385DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0E77FCEF2D99AF8200B385DF /* HomeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowDelegate.swift; sourceTree = "<group>"; };
+		0E77FCF12D99AF8E00B385DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0E86F0E22D67FF94009BE7D4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0E86F0E42D680182009BE7D4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0E872D642D83255D008A393E /* LoginBottomSheetFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetFlowDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,34 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		0E77FCEA2D99ADCA00B385DF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0E77FCEC2D99AF2500B385DF /* HomeViewModel */,
+				0E77FCED2D99AF3F00B385DF /* HomeViewController.swift */,
+				0E77FCEF2D99AF8200B385DF /* HomeFlowDelegate.swift */,
+				0E77FCF12D99AF8E00B385DF /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0E77FCEB2D99ADD600B385DF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0E77FCEA2D99ADCA00B385DF /* Home */,
+				0E9185C62D713B1100756390 /* LoginBottomSheet */,
+				0E86F0E12D67FF3D009BE7D4 /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0E77FCEC2D99AF2500B385DF /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
 		0E86F0DF2D67FF11009BE7D4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,13 +153,12 @@
 		0E86F0E02D67FF32009BE7D4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0E77FCEB2D99ADD600B385DF /* Scenes */,
 				0E77DDE22D92EE7000C55180 /* UserDefaults */,
 				0E77DDDF2D92EDE200C55180 /* Model */,
 				0E8C5B702D8B1D9800EF7CE9 /* DependencyInjection */,
 				0E87E4C82D77D2B400C18A15 /* Extensions */,
-				0E9185C62D713B1100756390 /* LoginBottomSheet */,
 				0E6FE9292D6B90FF003967D7 /* Constants */,
-				0E86F0E12D67FF3D009BE7D4 /* Splash */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -186,10 +219,10 @@
 			isa = PBXGroup;
 			children = (
 				0E872D642D83255D008A393E /* LoginBottomSheetFlowDelegate.swift */,
-				0E988D0A2D7F321900A87347 /* ViewModel */,
-				0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */,
 				0E9185C92D71405100756390 /* LoginBottomSheetView.swift */,
+				0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */,
 				0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */,
+				0E988D0A2D7F321900A87347 /* ViewModel */,
 			);
 			path = LoginBottomSheet;
 			sourceTree = "<group>";
@@ -370,6 +403,7 @@
 				0E8C5B742D8B205500EF7CE9 /* ViewControllersFactory.swift in Sources */,
 				0E86F0E52D680182009BE7D4 /* SplashView.swift in Sources */,
 				0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */,
+				0E77FCF22D99AF8E00B385DF /* HomeView.swift in Sources */,
 				0E77DDE42D92EED200C55180 /* UserDefaultsManager.swift in Sources */,
 				0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */,
 				0E6FE92C2D6B9136003967D7 /* Colors-Constants.swift in Sources */,
@@ -378,8 +412,10 @@
 				0E87B5BD2D6D511700D8D3DD /* Text-Constants.swift in Sources */,
 				0E6E281F2D81E95B00B89AFD /* ReminderFlowCoordinator.swift in Sources */,
 				0E988D0C2D7F323D00A87347 /* LoginBottomSheetViewModel.swift in Sources */,
+				0E77FCF02D99AF8200B385DF /* HomeFlowDelegate.swift in Sources */,
 				0E9185C82D713B5100756390 /* LoginBottomSheetViewController.swift in Sources */,
 				0E872D672D832DB3008A393E /* SplashFlowDelegate.swift in Sources */,
+				0E77FCEE2D99AF3F00B385DF /* HomeViewController.swift in Sources */,
 				0E77DDE12D92EDF200C55180 /* User.swift in Sources */,
 				0E87B5C02D6D552D00D8D3DD /* Metrics-Constants.swift in Sources */,
 				0E87E4CA2D77D2E100C18A15 /* String+Ext.swift in Sources */,
