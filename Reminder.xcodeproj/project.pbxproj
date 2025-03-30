@@ -15,6 +15,7 @@
 		0E77FCEE2D99AF3F00B385DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77FCED2D99AF3F00B385DF /* HomeViewController.swift */; };
 		0E77FCF02D99AF8200B385DF /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77FCEF2D99AF8200B385DF /* HomeFlowDelegate.swift */; };
 		0E77FCF22D99AF8E00B385DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77FCF12D99AF8E00B385DF /* HomeView.swift */; };
+		0E77FCF42D99B9B200B385DF /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E77FCF32D99B9B200B385DF /* ViewController+Ext.swift */; };
 		0E86F0E32D67FF94009BE7D4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F0E22D67FF94009BE7D4 /* SplashViewController.swift */; };
 		0E86F0E52D680182009BE7D4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E86F0E42D680182009BE7D4 /* SplashView.swift */; };
 		0E872D652D83255D008A393E /* LoginBottomSheetFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E872D642D83255D008A393E /* LoginBottomSheetFlowDelegate.swift */; };
@@ -44,6 +45,7 @@
 		0E77FCED2D99AF3F00B385DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0E77FCEF2D99AF8200B385DF /* HomeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowDelegate.swift; sourceTree = "<group>"; };
 		0E77FCF12D99AF8E00B385DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0E77FCF32D99B9B200B385DF /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
 		0E86F0E22D67FF94009BE7D4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0E86F0E42D680182009BE7D4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0E872D642D83255D008A393E /* LoginBottomSheetFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetFlowDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				0E87E4C92D77D2E100C18A15 /* String+Ext.swift */,
+				0E77FCF32D99B9B200B385DF /* ViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				0E872D672D832DB3008A393E /* SplashFlowDelegate.swift in Sources */,
 				0E77FCEE2D99AF3F00B385DF /* HomeViewController.swift in Sources */,
 				0E77DDE12D92EDF200C55180 /* User.swift in Sources */,
+				0E77FCF42D99B9B200B385DF /* ViewController+Ext.swift in Sources */,
 				0E87B5C02D6D552D00D8D3DD /* Metrics-Constants.swift in Sources */,
 				0E87E4CA2D77D2E100C18A15 /* String+Ext.swift in Sources */,
 				0EC902622D66C02A00247F34 /* SceneDelegate.swift in Sources */,

@@ -8,6 +8,6 @@
 import Foundation
 import UIKit
 
-protocol HomeFlowDelegate {
+protocol HomeFlowDelegate: AnyObject {
     
 }

@@ -13,9 +13,9 @@ class HomeViewController: UIViewController {
     public weak var flowDelegate: HomeFlowDelegate?
     
     init(contentView: HomeView, flowDelegate: HomeFlowDelegate ) {
-        self.flowDelegate = flowDelegate
         self.contentView = contentView
-        super.init()
+        self.flowDelegate = flowDelegate
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -23,7 +23,21 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+        setupBindView()
+        setup()
+    }
+    
+    private func setupBindView() {
+        self.view = contentView
+    }
+    
+    private func setup() {
+        buildHieranchy()
+    }
+    
+    private func buildHieranchy() {
+        setupContentViewToBounds(contentView: contentView)
     }
     
 }
