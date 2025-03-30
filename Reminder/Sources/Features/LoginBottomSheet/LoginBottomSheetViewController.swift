@@ -59,11 +59,49 @@ class LoginBottomSheetViewController: UIViewController {
     }
     
     func bindViewModel() {
-        viewModel.succesResult = {[ weak self] in
-           
-            self?.flowDelegate?.navigateToHome()
+        viewModel.succesResult = {[ weak self] userNameLogin in
+            self?.presentSaveLoginAlert(email: userNameLogin)
+        }
+        
+        viewModel.errorResult = { [ weak self] errorMessage in
+            self?.presentErrorAlert(message: errorMessage)
         }
     }
+    
+    private func presentSaveLoginAlert(email: String) {
+        let alertController = UIAlertController(title: "Salvar Acesso",
+                                                message: "Deseja salvar seu acesso?",
+                                                preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Salvar", style: .default) {_ in
+            
+            let user = User(email: email, isUserSaved: true)
+            UserDefaultsManager.savedUser(user: user)
+            self.flowDelegate?.navigateToHome()
+        }
+        
+        
+        let cancelAction = UIAlertAction(title: "Não", style: .cancel) {_ in
+            self.flowDelegate?.navigateToHome()
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true)
+    }
+    
+    private func presentErrorAlert(message: String) {
+        let alertController = UIAlertController(title: "Erro ao logar",
+                                                message: message,
+                                                preferredStyle: .alert)
+        
+        let retryAction = UIAlertAction(title: "Tentar Novamente",
+                                        style: .default)
+        alertController.addAction(retryAction)
+        self.present(alertController, animated: true)
+    }
+    
     
     func animatedShow(completion: (() -> Void)? = nil) {
        self.view.layoutIfNeeded()
