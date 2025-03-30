@@ -31,7 +31,6 @@ class SplashViewController: UIViewController {
         setupGesture()
     }
     
-    
     private func setup() {
         
         self.view.addSubview(contentView)
@@ -47,7 +46,6 @@ class SplashViewController: UIViewController {
             showLoginBottomSheet()
         }
     }
-    
     
     private func setupConstraints() {
         contentView.translatesAutoresizingMaskIntoConstraints = false

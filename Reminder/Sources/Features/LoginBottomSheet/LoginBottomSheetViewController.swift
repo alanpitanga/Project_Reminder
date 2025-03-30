@@ -102,7 +102,6 @@ class LoginBottomSheetViewController: UIViewController {
         self.present(alertController, animated: true)
     }
     
-    
     func animatedShow(completion: (() -> Void)? = nil) {
        self.view.layoutIfNeeded()
         contentView.transform = CGAffineTransform(translationX: 0, y: contentView.frame.height)
@@ -120,6 +119,5 @@ extension LoginBottomSheetViewController: LoginBottomSheetViewDelegate {
     func sendLogin(user: String, password: String) {
         viewModel.doAuth(userNameLogin: user, password: password)
     }
-    
     
 }

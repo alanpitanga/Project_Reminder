@@ -23,6 +23,4 @@ final class ViewControllerFactory: ViewControllerFactoryProtocol {
         
         return viewController
     }
-    
-    
 }

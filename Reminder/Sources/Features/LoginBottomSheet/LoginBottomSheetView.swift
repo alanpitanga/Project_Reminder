@@ -75,7 +75,6 @@ class LoginBottomSheetView: UIView {
         return button
     }()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
