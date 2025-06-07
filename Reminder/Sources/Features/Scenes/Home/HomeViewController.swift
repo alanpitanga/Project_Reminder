@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentView.backgroundColor = .white
         setupBindView()
         setup()
     }

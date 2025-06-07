@@ -40,7 +40,7 @@ class LoginBottomSheetView: UIView {
         let text = UITextField()
         text.placeholder = "login.email.placeholder".localized
         text.borderStyle = .roundedRect
-        text.layer.cornerRadius = 8
+        text.layer.cornerRadius = Metrics.tiny
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
     }()
