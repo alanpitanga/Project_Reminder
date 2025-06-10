@@ -7,6 +7,6 @@ target 'Reminder' do
 
   # Pods for Reminder
 
-  pod 'Firebase/Auth', '~> 8.15.0'
+  pod 'Firebase/Auth'
 
 end
