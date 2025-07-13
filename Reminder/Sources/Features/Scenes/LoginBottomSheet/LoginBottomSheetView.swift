@@ -28,6 +28,14 @@ class LoginBottomSheetView: UIView {
         return label
     }()
     
+    private let stackOne: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = Metrics.small
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
     private let emailLabel: UILabel = {
         let label = UILabel()
         label.text = "login.email.label".localized
@@ -43,6 +51,14 @@ class LoginBottomSheetView: UIView {
         text.layer.cornerRadius = Metrics.tiny
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
+    }()
+    
+    private let stackTwo: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = Metrics.small
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
     }()
     
     private let passwordLabel: UILabel = {
@@ -75,6 +91,13 @@ class LoginBottomSheetView: UIView {
         return button
     }()
     
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -88,41 +111,46 @@ class LoginBottomSheetView: UIView {
         self.backgroundColor = .white
         self.layer.cornerRadius = Metrics.small
         
-        self.addSubview(titleLabel)
-        self.addSubview(emailLabel)
-        self.addSubview(emailTextField)
-        self.addSubview(passwordLabel)
-        self.addSubview(passwordTextField)
-        self.addSubview(loginButton)
+        self.addSubview(scrollView)
+        scrollView.addSubview(titleLabel)
+        scrollView.addSubview(stackOne)
+        scrollView.addSubview(stackTwo)
+        stackOne.addArrangedSubview(emailLabel)
+        stackOne.addArrangedSubview(emailTextField)
+        stackTwo.addArrangedSubview(passwordLabel)
+        stackTwo.addArrangedSubview(passwordTextField)
+        scrollView.addSubview(loginButton)
         setupConstraints()
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: Metrics.huge),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            scrollView.topAnchor.constraint(equalTo: self.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            emailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.medium),
-            emailLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            titleLabel.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: Metrics.huge),
+            titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: Metrics.medium),
             
-            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: Metrics.small),
-            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
-            emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.medium),
+            stackOne.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.medium),
+            stackOne.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            stackOne.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.medium),
+            
             emailTextField.heightAnchor.constraint(equalToConstant: Metrics.inputSize),
             
-            passwordLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: Metrics.medium),
-            passwordLabel.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
+            stackTwo.topAnchor.constraint(equalTo: stackOne.bottomAnchor, constant: Metrics.medium),
+            stackTwo.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            stackTwo.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.medium),
             
-            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: Metrics.small),
-            passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
-            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: Metrics.medium),
+            loginButton.topAnchor.constraint(equalTo: stackTwo.bottomAnchor, constant: Metrics.medium),
             loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
             loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.medium),
             loginButton.heightAnchor.constraint(equalToConstant: Metrics.buttonSize),
+            loginButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -14)
             
         ])
     }
