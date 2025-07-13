@@ -24,11 +24,10 @@ class ReminderFlowCoordinator {
     }
 }
 
-extension ReminderFlowCoordinator: LoginBottomSheetFlowDelegate {
+extension ReminderFlowCoordinator: LoginBottomSheetFlowDelegate, HomeFlowDelegate {
     func navigateToHome() {
         self.navigationController?.dismiss(animated: true)
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
+        let viewController = viewControllerFactory.makeHomeViewController(flowDelegate: self)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -24,16 +24,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentView.backgroundColor = .white
-        setupBindView()
+        contentView.backgroundColor = Colors.gray600
         setup()
     }
     
-    private func setupBindView() {
-        self.view = contentView
-    }
-    
     private func setup() {
+        view.addSubview(contentView)
         buildHieranchy()
     }
     
