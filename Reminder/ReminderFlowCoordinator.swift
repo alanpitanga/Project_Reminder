@@ -13,6 +13,7 @@ class ReminderFlowCoordinator {
     
     private var navigationController: UINavigationController?
     private let viewControllerFactory: ViewControllerFactoryProtocol
+    
     public init() {
         self.viewControllerFactory = ViewControllerFactory()
     }
@@ -24,7 +25,7 @@ class ReminderFlowCoordinator {
     }
 }
 
-extension ReminderFlowCoordinator: LoginBottomSheetFlowDelegate, HomeFlowDelegate {
+extension ReminderFlowCoordinator: LoginBottomSheetFlowDelegate {
     func navigateToHome() {
         self.navigationController?.dismiss(animated: true)
         let viewController = viewControllerFactory.makeHomeViewController(flowDelegate: self)
@@ -33,7 +34,7 @@ extension ReminderFlowCoordinator: LoginBottomSheetFlowDelegate, HomeFlowDelegat
 }
 
 extension ReminderFlowCoordinator: SplashFlowDelegate {
-    func navigateToLogin() {
+    func openLoginBottomSheet() {
         let loginBottomSheet = viewControllerFactory.makeLoginBottomSheetViewController(flowDelegate: self)
         loginBottomSheet.modalPresentationStyle = .overCurrentContext
         loginBottomSheet.modalTransitionStyle = .crossDissolve
@@ -48,4 +49,16 @@ extension ReminderFlowCoordinator: SplashFlowDelegate {
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
+}
+
+extension ReminderFlowCoordinator: HomeFlowDelegate {
+    func logout() {
+        self.navigationController?.popViewController(animated: true)
+        self.openLoginBottomSheet()
+    }
+    
+    func navigateToRecipes() {
+        
+    }
+    
 }

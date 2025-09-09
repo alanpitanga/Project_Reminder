@@ -50,7 +50,8 @@ class HomeViewController: UIViewController {
     
     @objc
     private func logoutAction() {
-        //ação de logout
+        UserDefaultsManager.removeUser()
+        self.flowDelegate?.logout()
     }
     
 }

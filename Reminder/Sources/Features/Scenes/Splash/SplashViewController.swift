@@ -59,7 +59,7 @@ class SplashViewController: UIViewController {
     @objc
     private func showLoginBottomSheet() {
         animateLogoUp()
-        flowDelegate?.navigateToLogin()
+        flowDelegate?.openLoginBottomSheet()
     }
 }
 
