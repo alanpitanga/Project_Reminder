@@ -30,6 +30,7 @@
 		0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9185C92D71405100756390 /* LoginBottomSheetView.swift */; };
 		0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */; };
 		0E988D0C2D7F323D00A87347 /* LoginBottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E988D0B2D7F323D00A87347 /* LoginBottomSheetViewModel.swift */; };
+		0E9AC0342EA1AA9200A98869 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9AC0332EA1AA8B00A98869 /* HomeViewDelegate.swift */; };
 		0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9025F2D66C02A00247F34 /* AppDelegate.swift */; };
 		0EC902622D66C02A00247F34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC902612D66C02A00247F34 /* SceneDelegate.swift */; };
 		0EC902692D66C02C00247F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC902682D66C02C00247F34 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		0E9185C92D71405100756390 /* LoginBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetView.swift; sourceTree = "<group>"; };
 		0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewDelegate.swift; sourceTree = "<group>"; };
 		0E988D0B2D7F323D00A87347 /* LoginBottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewModel.swift; sourceTree = "<group>"; };
+		0E9AC0332EA1AA8B00A98869 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
 		0EC9025C2D66C02A00247F34 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC9025F2D66C02A00247F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EC902612D66C02A00247F34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				0E77FCEC2D99AF2500B385DF /* HomeViewModel */,
 				0E77FCED2D99AF3F00B385DF /* HomeViewController.swift */,
+				0E9AC0332EA1AA8B00A98869 /* HomeViewDelegate.swift */,
 				0E77FCEF2D99AF8200B385DF /* HomeFlowDelegate.swift */,
 				0E77FCF12D99AF8E00B385DF /* HomeView.swift */,
 			);
@@ -385,9 +388,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Reminder/Pods-Reminder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Reminder/Pods-Reminder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,6 +416,7 @@
 				0E77FCF22D99AF8E00B385DF /* HomeView.swift in Sources */,
 				0E77DDE42D92EED200C55180 /* UserDefaultsManager.swift in Sources */,
 				0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */,
+				0E9AC0342EA1AA9200A98869 /* HomeViewDelegate.swift in Sources */,
 				0E6FE92C2D6B9136003967D7 /* Colors-Constants.swift in Sources */,
 				0E872D652D83255D008A393E /* LoginBottomSheetFlowDelegate.swift in Sources */,
 				0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */,

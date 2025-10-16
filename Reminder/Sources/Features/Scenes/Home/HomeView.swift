@@ -10,7 +10,9 @@ import UIKit
 
 class HomeView: UIView {
     
-    private let profileBackground: UIView = {
+    weak public var delegate: HomeViewDelegate?
+    
+    let profileBackground: UIView = {
        let view = UIView()
         view.backgroundColor = Colors.gray600
         
@@ -18,7 +20,7 @@ class HomeView: UIView {
         return view
     }()
     
-    private let contentBackground: UIView = {
+    let contentBackground: UIView = {
         let view = UIView()
         view.layer.cornerRadius = Metrics.medium
         view.layer.masksToBounds = true
@@ -27,16 +29,18 @@ class HomeView: UIView {
         return view
     }()
     
-    private let profileImage: UIImageView = {
+    let profileImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = Metrics.huge
+        imageView.isUserInteractionEnabled = true
+        imageView.image = UIImage(named: "user")
+        imageView.layer.cornerRadius = Metrics.medium
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private let welcomeLabel: UILabel = {
+    let welcomeLabel: UILabel = {
         let label = UILabel()
         label.text = "home.welcome.label".localized
         label.font = Typography.input
@@ -45,7 +49,7 @@ class HomeView: UIView {
         return label
     }()
     
-    private let nameLabel: UILabel = {
+    let nameLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.heading
         label.textColor = Colors.gray100
@@ -53,7 +57,7 @@ class HomeView: UIView {
         return label
     }()
     
-    private let feedbackButton: UIButton = {
+        let feedbackButton: UIButton = {
         let button = UIButton()
         button.setTitle("home.feedback.button.title".localized, for: .normal)
         button.backgroundColor = Colors.gray100
@@ -65,7 +69,6 @@ class HomeView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .gray
         setupUI()
     }
     
@@ -82,6 +85,7 @@ class HomeView: UIView {
         contentBackground.addSubview(feedbackButton)
         
         configureContraints()
+        setImageGesture()
     }
     
     private func configureContraints() {
@@ -113,5 +117,16 @@ class HomeView: UIView {
             feedbackButton.trailingAnchor.constraint(equalTo: contentBackground.trailingAnchor, constant: -Metrics.medium),
             feedbackButton.heightAnchor.constraint(equalToConstant: Metrics.buttonSize)
         ])
+    }
+    
+    private func setImageGesture() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                          action: #selector(profileImageTapped))
+        profileImage.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc
+    private func profileImageTapped() {
+        delegate?.didTapProfileImage()
     }
 }

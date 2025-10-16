@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
     private func setup() {
         view.addSubview(contentView)
         view.backgroundColor = Colors.gray600
+        contentView.delegate = self
         buildHieranchy()
     }
     
@@ -52,6 +53,36 @@ class HomeViewController: UIViewController {
     private func logoutAction() {
         UserDefaultsManager.removeUser()
         self.flowDelegate?.logout()
+    }
+    
+}
+
+extension HomeViewController: HomeViewDelegate {
+    func didTapProfileImage() {
+        selectedProfileImage()
+    }
+}
+
+extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func selectedProfileImage() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true)
+    }
+    
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editing = info[.editedImage] as? UIImage {
+            contentView.profileImage.image = editing
+        } else if let original = info[.originalImage] as? UIImage {
+            contentView.profileImage.image = original
+        }
+        dismiss(animated: true)
+    }
+    
+    func    imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
     }
     
 }
