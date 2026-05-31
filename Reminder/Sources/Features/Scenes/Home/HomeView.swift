@@ -34,8 +34,7 @@ class HomeView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
-        imageView.image = UIImage(named: "user")
-        imageView.layer.cornerRadius = Metrics.medium
+            imageView.layer.cornerRadius = Metrics.medium
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -49,12 +48,14 @@ class HomeView: UIView {
         return label
     }()
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.font = Typography.heading
-        label.textColor = Colors.gray100
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    let nameTextField: UITextField = {
+        let textField = UITextField()
+        textField.font = Typography.heading
+        textField.placeholder = "Digite seu nome"
+        textField.textColor = Colors.gray100
+        textField.returnKeyType = .done
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
     }()
     
         let feedbackButton: UIButton = {
@@ -70,6 +71,7 @@ class HomeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        setupTextField()
     }
     
     required init?(coder: NSCoder) {
@@ -80,7 +82,7 @@ class HomeView: UIView {
         addSubview(profileBackground)
         profileBackground.addSubview(profileImage)
         profileBackground.addSubview(welcomeLabel)
-        profileBackground.addSubview(nameLabel)
+        profileBackground.addSubview(nameTextField)
         addSubview(contentBackground)
         contentBackground.addSubview(feedbackButton)
         
@@ -104,8 +106,8 @@ class HomeView: UIView {
             welcomeLabel.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: Metrics.small),
             welcomeLabel.leadingAnchor.constraint(equalTo: profileImage.leadingAnchor),
             
-            nameLabel.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: Metrics.little),
-            nameLabel.leadingAnchor.constraint(equalTo: profileBackground.leadingAnchor),
+            nameTextField.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: Metrics.little),
+            nameTextField.leadingAnchor.constraint(equalTo: profileImage.leadingAnchor),
             
             contentBackground.topAnchor.constraint(equalTo: profileBackground.bottomAnchor),
             contentBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -119,6 +121,13 @@ class HomeView: UIView {
         ])
     }
     
+    private func setupTextField() {
+        nameTextField.addTarget(self,
+                                action: #selector(nameTextFieldDidEndEditing),
+                                for: .editingDidEnd)
+        nameTextField.delegate = self
+    }
+    
     private func setImageGesture() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self,
                                                           action: #selector(profileImageTapped))
@@ -128,5 +137,20 @@ class HomeView: UIView {
     @objc
     private func profileImageTapped() {
         delegate?.didTapProfileImage()
+    }
+    
+    @objc
+    private func nameTextFieldDidEndEditing() {
+        let userNameText = nameTextField.text ?? ""
+        UserDefaultsManager.saveNameUser(name: userNameText)
+    }
+}
+
+extension HomeView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        let userNameText = nameTextField.text ?? ""
+        UserDefaultsManager.saveNameUser(name: userNameText)
+        return true
     }
 }

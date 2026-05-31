@@ -11,10 +11,12 @@ import UIKit
 class HomeViewController: UIViewController {
     let contentView: HomeView
     public weak var flowDelegate: HomeFlowDelegate?
+    let viewModel: HomeViewModel
     
-    init(contentView: HomeView, flowDelegate: HomeFlowDelegate ) {
+    init(contentView: HomeView, flowDelegate: HomeFlowDelegate) {
         self.contentView = contentView
         self.flowDelegate = flowDelegate
+        self.viewModel = HomeViewModel()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,6 +28,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setup()
         setupNavigationBar()
+        checkingForExistData()
     }
     
     private func setupNavigationBar() {
@@ -55,6 +58,16 @@ class HomeViewController: UIViewController {
         self.flowDelegate?.logout()
     }
     
+    private func checkingForExistData() {
+        if let user = UserDefaultsManager.loadUser() {
+            contentView.nameTextField.text = UserDefaultsManager.loadUserName()	
+        }
+        
+        if let savedImage = UserDefaultsManager.loadProfileImage() {
+            contentView.profileImage.image = savedImage
+        }
+    }
+    
 }
 
 extension HomeViewController: HomeViewDelegate {
@@ -73,10 +86,12 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
     }
     
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let editing = info[.editedImage] as? UIImage {
-            contentView.profileImage.image = editing
-        } else if let original = info[.originalImage] as? UIImage {
-            contentView.profileImage.image = original
+        if let editedImage = info[.editedImage] as? UIImage {
+            contentView.profileImage.image = editedImage
+            UserDefaultsManager.saveProfileImage(image: editedImage)
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            contentView.profileImage.image = originalImage
+            UserDefaultsManager.saveProfileImage(image: originalImage)
         }
         dismiss(animated: true)
     }
