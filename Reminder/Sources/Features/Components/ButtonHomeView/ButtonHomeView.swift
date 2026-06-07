@@ -1,0 +1,110 @@
+//
+//  ButtonHomeView.swift
+//  Reminder
+//
+//  Created by Alan Pitanga on 31/05/26.
+//
+
+import Foundation
+import UIKit
+
+class ButtonHomeView: UIView {
+    private let iconView: UIView = {
+        let view = UIView()
+        view.backgroundColor = Colors.gray600
+        view.layer.cornerRadius = 10
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private let iconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private let titleLable: UILabel = {
+        let label = UILabel()
+        label.font  = Typography.subHeading
+        label.textColor = Colors.gray100
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints  = false
+        return label
+    }()
+    
+    private let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font  = Typography.body
+        label.textColor = Colors.gray200
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let arrowImageView: UIImageView = {
+        let imageView = UIImageView(image:  UIImage(systemName: "chevron.right"))
+        imageView.tintColor = Colors.gray300
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    init(icon: UIImage?, tittle: String, description: String) {
+        super.init(frame: .zero)
+        
+        backgroundColor = Colors.gray700
+        layer.cornerRadius = 10
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        iconImageView.image = icon
+        titleLable.text = tittle
+        descriptionLabel.text = description
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupSelfClass() {
+        
+    }
+    
+    private func setupUI(){
+        addSubview(iconView)
+        iconView.addSubview(iconImageView)
+        addSubview(titleLable)
+        addSubview(descriptionLabel)
+        addSubview(arrowImageView)
+        
+        NSLayoutConstraint.activate([
+            
+            iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.medium),
+            iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            iconView.widthAnchor.constraint(equalToConstant: 80),
+            iconView.heightAnchor.constraint(equalToConstant: 80),
+            
+            iconImageView.centerXAnchor.constraint(equalTo: iconView.centerXAnchor),
+            iconImageView.centerYAnchor.constraint(equalTo: iconView.centerYAnchor),
+            iconImageView.widthAnchor.constraint(equalToConstant: 48),
+            iconImageView.heightAnchor.constraint(equalToConstant: 48),
+
+            titleLable.topAnchor.constraint(equalTo: topAnchor, constant: Metrics.medium),
+            titleLable.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: 16),
+            titleLable.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+
+            descriptionLabel.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: Metrics.medium),
+            descriptionLabel.leadingAnchor.constraint(equalTo: titleLable.leadingAnchor),
+            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            descriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: 16),
+
+            arrowImageView.centerYAnchor.constraint(equalTo: titleLable.centerYAnchor),
+            arrowImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            arrowImageView.widthAnchor.constraint(equalToConstant: 16),
+            arrowImageView.heightAnchor.constraint(equalToConstant: 16)
+            
+        ])
+    }
+    
+}
