@@ -24,6 +24,8 @@
 		0E87B5C02D6D552D00D8D3DD /* Metrics-Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87B5BF2D6D552D00D8D3DD /* Metrics-Constants.swift */; };
 		0E87E4C72D77CFA400C18A15 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E87E4C62D77CFA400C18A15 /* Localizable.strings */; };
 		0E87E4CA2D77D2E100C18A15 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87E4C92D77D2E100C18A15 /* String+Ext.swift */; };
+		0E8B69332FD5D81500C0E41A /* NewRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8B69322FD5D80900C0E41A /* NewRecipeViewController.swift */; };
+		0E8B69352FD5DAD400C0E41A /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8B69342FD5DACA00C0E41A /* NewRecipeView.swift */; };
 		0E8C5B722D8B1DE500EF7CE9 /* ViewControllersFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C5B712D8B1DE500EF7CE9 /* ViewControllersFactoryProtocol.swift */; };
 		0E8C5B742D8B205500EF7CE9 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C5B732D8B205500EF7CE9 /* ViewControllersFactory.swift */; };
 		0E9185C82D713B5100756390 /* LoginBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */; };
@@ -57,6 +59,8 @@
 		0E87B5BF2D6D552D00D8D3DD /* Metrics-Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Metrics-Constants.swift"; sourceTree = "<group>"; };
 		0E87E4C62D77CFA400C18A15 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		0E87E4C92D77D2E100C18A15 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		0E8B69322FD5D80900C0E41A /* NewRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeViewController.swift; sourceTree = "<group>"; };
+		0E8B69342FD5DACA00C0E41A /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
 		0E8C5B712D8B1DE500EF7CE9 /* ViewControllersFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactoryProtocol.swift; sourceTree = "<group>"; };
 		0E8C5B732D8B205500EF7CE9 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		0E9185C72D713B5100756390 /* LoginBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		0E77FCEB2D99ADD600B385DF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0E8B69312FD5D77200C0E41A /* NewRecipe */,
 				0E77FCEA2D99ADCA00B385DF /* Home */,
 				0E9185C62D713B1100756390 /* LoginBottomSheet */,
 				0E86F0E12D67FF3D009BE7D4 /* Splash */,
@@ -216,6 +221,15 @@
 				0E77FCF32D99B9B200B385DF /* ViewController+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0E8B69312FD5D77200C0E41A /* NewRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				0E8B69342FD5DACA00C0E41A /* NewRecipeView.swift */,
+				0E8B69322FD5D80900C0E41A /* NewRecipeViewController.swift */,
+			);
+			path = NewRecipe;
 			sourceTree = "<group>";
 		};
 		0E8C5B702D8B1D9800EF7CE9 /* DependencyInjection */ = {
@@ -441,9 +455,11 @@
 				0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */,
 				0E9AC0342EA1AA9200A98869 /* HomeViewDelegate.swift in Sources */,
 				0E6FE92C2D6B9136003967D7 /* Colors-Constants.swift in Sources */,
+				0E8B69352FD5DAD400C0E41A /* NewRecipeView.swift in Sources */,
 				0E872D652D83255D008A393E /* LoginBottomSheetFlowDelegate.swift in Sources */,
 				0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */,
 				0E87B5BD2D6D511700D8D3DD /* Text-Constants.swift in Sources */,
+				0E8B69332FD5D81500C0E41A /* NewRecipeViewController.swift in Sources */,
 				0E6E281F2D81E95B00B89AFD /* ReminderFlowCoordinator.swift in Sources */,
 				0E988D0C2D7F323D00A87347 /* LoginBottomSheetViewModel.swift in Sources */,
 				0E77FCF02D99AF8200B385DF /* HomeFlowDelegate.swift in Sources */,
