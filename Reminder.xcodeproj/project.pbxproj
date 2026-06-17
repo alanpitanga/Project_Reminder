@@ -33,6 +33,7 @@
 		0E959D802FCCA38A000741F4 /* ButtonHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E959D7F2FCCA383000741F4 /* ButtonHomeView.swift */; };
 		0E988D092D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */; };
 		0E988D0C2D7F323D00A87347 /* LoginBottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E988D0B2D7F323D00A87347 /* LoginBottomSheetViewModel.swift */; };
+		0E998AF42FE3504400640C5A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998AF32FE3503E00640C5A /* Input.swift */; };
 		0E9AC0342EA1AA9200A98869 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9AC0332EA1AA8B00A98869 /* HomeViewDelegate.swift */; };
 		0EA5B5022EAE8831005C42C8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA5B5012EAE8829005C42C8 /* HomeViewModel.swift */; };
 		0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9025F2D66C02A00247F34 /* AppDelegate.swift */; };
@@ -68,6 +69,7 @@
 		0E959D7F2FCCA383000741F4 /* ButtonHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHomeView.swift; sourceTree = "<group>"; };
 		0E988D082D7F15FF00A87347 /* LoginBottomSheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewDelegate.swift; sourceTree = "<group>"; };
 		0E988D0B2D7F323D00A87347 /* LoginBottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetViewModel.swift; sourceTree = "<group>"; };
+		0E998AF32FE3503E00640C5A /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		0E9AC0332EA1AA8B00A98869 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
 		0EA5B5012EAE8829005C42C8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0EC9025C2D66C02A00247F34 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +258,7 @@
 		0E959D7D2FCCA315000741F4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0E998AF22FE3503000640C5A /* Input */,
 				0E959D7E2FCCA34C000741F4 /* ButtonHomeView */,
 			);
 			path = Components;
@@ -275,6 +278,14 @@
 				0E988D0B2D7F323D00A87347 /* LoginBottomSheetViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E998AF22FE3503000640C5A /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				0E998AF32FE3503E00640C5A /* Input.swift */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 		0EC902532D66C02A00247F34 = {
@@ -464,6 +475,7 @@
 				0E988D0C2D7F323D00A87347 /* LoginBottomSheetViewModel.swift in Sources */,
 				0E77FCF02D99AF8200B385DF /* HomeFlowDelegate.swift in Sources */,
 				0E9185C82D713B5100756390 /* LoginBottomSheetViewController.swift in Sources */,
+				0E998AF42FE3504400640C5A /* Input.swift in Sources */,
 				0E872D672D832DB3008A393E /* SplashFlowDelegate.swift in Sources */,
 				0E77FCEE2D99AF3F00B385DF /* HomeViewController.swift in Sources */,
 				0E77DDE12D92EDF200C55180 /* User.swift in Sources */,

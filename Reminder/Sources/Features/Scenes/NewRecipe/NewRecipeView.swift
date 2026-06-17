@@ -47,6 +47,11 @@ class NewRecipeView: UIView {
         return button
     }()
     
+    let remedyInput = Input(title: "Remédio", placeholder: "Nome do medicamento")
+    let timeInput = Input(title: "Horário", placeholder: "00:00")
+    let recurrencyInput = Input(title: "Recorrência", placeholder: "Selecione")
+    //let takeNowCheckBox
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -61,6 +66,9 @@ class NewRecipeView: UIView {
         addSubview(backButton)
         addSubview(titleLabel)
         addSubview(descriptionLabel)
+        addSubview(remedyInput)
+        addSubview(timeInput)
+        addSubview(recurrencyInput)
         addSubview(addButton)
         
         setupConstraints()
@@ -80,10 +88,24 @@ class NewRecipeView: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.large),
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.large),
             
+            remedyInput.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: Metrics.medium),
+            remedyInput.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.large),
+            remedyInput.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.large),
+            
+            timeInput.topAnchor.constraint(equalTo: remedyInput.bottomAnchor, constant: Metrics.medium),
+            timeInput.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.large),
+            timeInput.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.large),
+            
+            recurrencyInput.topAnchor.constraint(equalTo: timeInput.bottomAnchor, constant: Metrics.medium),
+            recurrencyInput.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.large),
+            recurrencyInput.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.large),
+            
             addButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.large),
             addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.large),
             addButton.heightAnchor.constraint(equalToConstant: 56),
-            addButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Metrics.large)
+            addButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Metrics.huge)
+            
+            
         ])
     }
 }
