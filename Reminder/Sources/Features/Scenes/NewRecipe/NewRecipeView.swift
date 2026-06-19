@@ -50,7 +50,7 @@ class NewRecipeView: UIView {
     let remedyInput = Input(title: "Remédio", placeholder: "Nome do medicamento")
     let timeInput = Input(title: "Horário", placeholder: "00:00")
     let recurrencyInput = Input(title: "Recorrência", placeholder: "Selecione")
-    //let takeNowCheckBox
+    let takeNowCheckBox = Checkbox(title: "Tomar agora")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -69,6 +69,7 @@ class NewRecipeView: UIView {
         addSubview(remedyInput)
         addSubview(timeInput)
         addSubview(recurrencyInput)
+        addSubview(takeNowCheckBox)
         addSubview(addButton)
         
         setupConstraints()
@@ -99,6 +100,10 @@ class NewRecipeView: UIView {
             recurrencyInput.topAnchor.constraint(equalTo: timeInput.bottomAnchor, constant: Metrics.medium),
             recurrencyInput.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.large),
             recurrencyInput.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.large),
+            
+            takeNowCheckBox.topAnchor.constraint(equalTo: recurrencyInput.bottomAnchor, constant: Metrics.medium),
+            takeNowCheckBox.leadingAnchor.constraint(equalTo: recurrencyInput.leadingAnchor),
+            takeNowCheckBox.trailingAnchor.constraint(equalTo: recurrencyInput.trailingAnchor),
             
             addButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Metrics.large),
             addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Metrics.large),
