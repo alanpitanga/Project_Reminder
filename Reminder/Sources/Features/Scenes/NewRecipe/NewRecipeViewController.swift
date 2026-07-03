@@ -25,7 +25,11 @@ class NewRecipeViewController: UIViewController {
     }
     
     private func setupActions() {
-        
+        newRecipeView.backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func setupConstraints() {
