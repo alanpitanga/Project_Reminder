@@ -36,6 +36,7 @@
 		0E998AF42FE3504400640C5A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E998AF32FE3503E00640C5A /* Input.swift */; };
 		0E9AC0342EA1AA9200A98869 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9AC0332EA1AA8B00A98869 /* HomeViewDelegate.swift */; };
 		0E9C4A482FE4BD3900DEA0E3 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9C4A472FE4BD2200DEA0E3 /* Checkbox.swift */; };
+		0EA443892FF7399100DC05F9 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA443882FF7397F00DC05F9 /* DBHelper.swift */; };
 		0EA5B5022EAE8831005C42C8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA5B5012EAE8829005C42C8 /* HomeViewModel.swift */; };
 		0EC902602D66C02A00247F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9025F2D66C02A00247F34 /* AppDelegate.swift */; };
 		0EC902622D66C02A00247F34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC902612D66C02A00247F34 /* SceneDelegate.swift */; };
@@ -73,6 +74,7 @@
 		0E998AF32FE3503E00640C5A /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		0E9AC0332EA1AA8B00A98869 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
 		0E9C4A472FE4BD2200DEA0E3 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		0EA443882FF7397F00DC05F9 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		0EA5B5012EAE8829005C42C8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0EC9025C2D66C02A00247F34 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC9025F2D66C02A00247F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		0E86F0E02D67FF32009BE7D4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0EA443872FF7396700DC05F9 /* Database */,
 				0E959D7D2FCCA315000741F4 /* Components */,
 				0E77FCEB2D99ADD600B385DF /* Scenes */,
 				0E77DDE22D92EE7000C55180 /* UserDefaults */,
@@ -297,6 +300,14 @@
 				0E9C4A472FE4BD2200DEA0E3 /* Checkbox.swift */,
 			);
 			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		0EA443872FF7396700DC05F9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				0EA443882FF7397F00DC05F9 /* DBHelper.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		0EC902532D66C02A00247F34 = {
@@ -446,9 +457,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Reminder/Pods-Reminder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Reminder/Pods-Reminder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -477,6 +492,7 @@
 				0E872D652D83255D008A393E /* LoginBottomSheetFlowDelegate.swift in Sources */,
 				0E9185CA2D71405100756390 /* LoginBottomSheetView.swift in Sources */,
 				0E9C4A482FE4BD3900DEA0E3 /* Checkbox.swift in Sources */,
+				0EA443892FF7399100DC05F9 /* DBHelper.swift in Sources */,
 				0E87B5BD2D6D511700D8D3DD /* Text-Constants.swift in Sources */,
 				0E8B69332FD5D81500C0E41A /* NewRecipeViewController.swift in Sources */,
 				0E6E281F2D81E95B00B89AFD /* ReminderFlowCoordinator.swift in Sources */,
