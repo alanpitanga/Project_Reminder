@@ -33,7 +33,7 @@ class DBHelper {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         remedy TEXT,
         time TEXT,
-        recurrency TEXT,
+        recurrence TEXT,
         takeNow INTEGER
     );
     """
@@ -52,7 +52,7 @@ class DBHelper {
     }
     
     func insertRecept(remedy: String, time: String, recurrence: String, takeNow: Bool) {
-        let insertQuery = "INSERT INTO Receipts (remedy, time, recurrence, takeNow) (?, ?, ?, ?);"
+        let insertQuery = "INSERT INTO receipts (remedy, time, recurrence, takeNow) VALUES (?, ?, ?, ?);"
         var statement: OpaquePointer?
         
         if sqlite3_prepare_v2(db, insertQuery, -1, &statement, nil) == SQLITE_OK {
