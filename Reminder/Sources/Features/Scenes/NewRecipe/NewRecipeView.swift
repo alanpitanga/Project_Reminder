@@ -100,6 +100,8 @@ class NewRecipeView: UIView {
         setupTimeInput()
         setupRecurrenceInput()
         setupConstraints()
+        setupObervers()
+        validateInputs()
     }
     
     
@@ -166,12 +168,31 @@ class NewRecipeView: UIView {
         recurrencePicker.dataSource = self
     }
     
+    private func validateInputs() {
+        let isRemedyFilled = !(remedyInput.textField.text ?? "").isEmpty
+        let isTimeFilled = !(timeInput.textField.text ?? "").isEmpty
+        let isRecurrenceFilled = !(recurrencyInput.textField.text ?? "").isEmpty
+        
+        addButton.isEnabled = isRemedyFilled && isTimeFilled && isRecurrenceFilled
+        addButton.backgroundColor = addButton.isEnabled ? Colors.primaryRedBase : Colors.gray500
+    }
+    
+    private func setupObervers() {
+        remedyInput.textField.addTarget(self, action: #selector(inputDidChange), for: .editingChanged)
+        
+        timeInput.textField.addTarget(self, action: #selector(inputDidChange), for: .editingChanged)
+        
+        recurrencyInput.textField.addTarget(self, action: #selector(inputDidChange), for: .editingChanged)
+    }
+    
     @objc
     private func didSelectTime() {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         timeInput.textField.text = formatter.string(from: timePicker.date)
         timeInput.textField.resignFirstResponder()
+        
+        validateInputs()
     }
     
     @objc
@@ -179,6 +200,13 @@ class NewRecipeView: UIView {
         let selectedRow = recurrencePicker.selectedRow(inComponent: 0)
         recurrencyInput.textField.text = recurrenceOptions[selectedRow]
         recurrencyInput.textField.resignFirstResponder()
+        
+        validateInputs()
+    }
+    
+    @objc
+    private func inputDidChange() {
+        validateInputs()
     }
 }
 
